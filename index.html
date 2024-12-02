@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging CSS</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensures padding and border are included in the element's dimensions */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Layout container */
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Makes the layout responsive */
+            gap: 20px; /* Spacing between items */
+            justify-content: center;
+        }
+
+        /* Individual item styles */
+        .item {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 200px; /* Fixed width */
+            text-align: center;
+            position: relative; /* To avoid overlap */
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .item {
+                width: 100%; /* Full-width for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Debugging CSS Example</h1>
+        <p>A clean, properly spaced layout.</p>
+    </div>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 CSS Debugging Tutorial</p>
+    </div>
+</body>
+</html>
